@@ -15,7 +15,7 @@
 
 ```
 !git clone https://github.com/tiansiyuan/sh-power.git
-cd sh-pwer/notebook
+cd sh-power/notebook
 pip install -r requirements.txt
 
 注意：在运行上述命令后，可能会有类似的警告(Note: you may need to restart the kernel to use updated packages.) You can restart your Jupyter Kernel by simply clicking Kernel > Restart from the Jupyter menu. Note: This will reset your notebook and remove all variables or methods you've defined! Sometimes you'll notice that your notebook is still hanging after you've restart the kernel. If this occurs try refreshing your browser
