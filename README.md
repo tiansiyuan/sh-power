@@ -2,7 +2,7 @@
 
 使用 YOLOv5。
 
-## Create Notebook server on Kubeflow 
+## 在 Kubeflow 上创建 Notebook server 
 
 - 创建一个 Notebook Server [官方 docker image: kubeflownotebookswg/jupyter-pytorch-cuda-full:v1.6.0] 使用 1 GPU, 4CPUs, 16GB 内存和 10G 卷空间
 
