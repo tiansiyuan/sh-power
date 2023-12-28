@@ -2,6 +2,20 @@
 
 使用 YOLOv5。
 
+为在浏览器里访问系统的仪表板（Dashboard，http://192.168.1.5:8080 ），后台需要执行：
+
+```sh
+microk8s kubectl port-forward -n istio-system svc/istio-ingressgateway --address 0.0.0.0 8080:80
+Forwarding from 0.0.0.0:8080 -> 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+......
+```
+
+如果一段时间后该命令的输出异常，需要用 Ctrl+C 中断它并重新执行。
+
 ## 在 Kubeflow 上创建 Notebook server 
 
 - 创建一个 Notebook Server [官方 docker image: kubeflownotebookswg/jupyter-pytorch-cuda-full:v1.6.0] 使用 1 GPU, 4CPUs, 16GB 内存和 10G 卷空间
