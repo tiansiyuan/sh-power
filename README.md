@@ -16,6 +16,8 @@ Handling connection for 8080
 
 如果一段时间后该命令的输出异常，需要用 Ctrl+C 中断它并重新执行。
 
+需要确保该主机的IP（192.168.1.5）不变，否则系统可能无法运行。
+
 ## 在 Kubeflow 上创建 Notebook server 
 
 - 创建一个 Notebook Server [官方 docker image: kubeflownotebookswg/jupyter-pytorch-cuda-full:v1.6.0] 使用 1 GPU, 4CPUs, 16GB 内存和 10G 卷空间
