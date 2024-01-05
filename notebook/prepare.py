@@ -108,7 +108,8 @@ train_file = open(os.path.join(wd, "yolov5_train.txt"), 'a')
 test_file = open(os.path.join(wd, "yolov5_val.txt"), 'a')
 list_imgs = os.listdir(image_dir) # list image files
 prob = random.randint(1, 100)
-print("Probability: %d" % prob)
+# print("Probability: %d" % prob)
+print("Dividing data into training set and validation set.\n ...")
 for i in range(0,len(list_imgs)):
     path = os.path.join(image_dir,list_imgs[i])
     if os.path.isfile(path):
@@ -121,7 +122,7 @@ for i in range(0,len(list_imgs)):
         label_name = nameWithoutExtention + '.txt'
         label_path = os.path.join(yolo_labels_dir, label_name)
     prob = random.randint(1, 100)
-    print("Probability: %d" % prob)
+    # print("Probability: %d" % prob)
     if(prob < TRAIN_RATIO): # train dataset
         if os.path.exists(annotation_path):
             train_file.write(image_path + '\n')
@@ -137,4 +138,4 @@ for i in range(0,len(list_imgs)):
 train_file.close()
 test_file.close()
  
- 
+print("Dividing done.") 
