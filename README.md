@@ -16,6 +16,28 @@ Handling connection for 8080
 
 如果一段时间后该命令的输出异常，需要用 Ctrl+C 中断它并重新执行。
 
+上述方法简便但不是很稳定。还可以使用下面的方法：
+
+运行下面的命令以获取`IP`地址:
+
+```sh
+kubectl -n kubeflow get svc istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+通常，输出是`10.64.140.43`。如果不是的话，取实际的输出。
+
+在本地通过`http://10.64.140.43.nip.io`访问仪表板。
+
+如果是远程访问，需要设置一个`SSH`通道并用作`SOCKS`代理。
+
+```sh
+ssh -D 9999 sn-kf@192.168.1.5
+```
+
+设置`SOCKS`主机为`127.0.0.1`，端口为`9999`。
+
+这个方法需要`SSH`通道保持运行。
+
 需要确保该主机的IP（192.168.1.5）不变，否则系统可能无法运行。
 
 ## 在 Kubeflow 上创建 Notebook server 
