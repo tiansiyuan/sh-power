@@ -52,7 +52,7 @@ ssh -D 9999 sn-kf@192.168.1.5
 - 在 notebook 中 clone 该 repo 并安装 requirements.txt 中的依赖包:
 
 ```
-!git clone https://github.com/tiansiyuan/sh-power.git
+git clone https://github.com/tiansiyuan/sh-power.git
 cd sh-power/notebook
 pip install -r requirements.txt
 
@@ -66,8 +66,8 @@ mkdir -p VOCdevkit
 cd VOCdevkit
 
 # 下载数据
-!wget https://jhx.japaneast.cloudapp.azure.com/share/VOC2007.zip
-!unzip VOC2007.zip
+wget https://jhx.japaneast.cloudapp.azure.com/share/VOC2007.zip
+unzip VOC2007.zip
 Archive:  VOC2007.zip
    creating: VOC2007/
    creating: VOC2007/Annotations/
@@ -81,7 +81,7 @@ Archive:  VOC2007.zip
   inflating: VOC2007/JPEGImages/PartB_02404.jpg  
 
 cd ..
-!python prepare.py
+python prepare.py
 Probability: 26
 Probability: 62
 Probability: 78
@@ -115,7 +115,7 @@ width_multiple: 0.50  # layer channel multiple
 ## 模型训练
 
 ```
-!python train.py     # you can also add '--arguments' to change for your setting
+python train.py     # you can also add '--arguments' to change for your setting
 
 github: skipping check (not a git repository)
 YOLOv5 🚀 4e4d2b9 torch 1.8.1+cu111 CUDA:0 (NVIDIA GeForce RTX 3070, 7973.6875MB)
@@ -433,7 +433,7 @@ Optimizer stripped from runs/train/exp5/weights/best.pt, 14.4MB
 
 对于 `VOCdevkit/images` 中的例子图像运行推理：
 ```
-!python detect.py --weight runs/train/exp5/weights/best.pt   --source  VOCdevkit/images/train/000004.jpg
+python detect.py --weight runs/train/exp5/weights/best.pt   --source  VOCdevkit/images/train/000004.jpg
 
 Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.25, device='', exist_ok=False, img_size=640, iou_thres=0.45, name='exp', nosave=False, project='runs/detect', save_conf=False, save_txt=False, source='VOCdevkit/images/train/000004.jpg', update=False, view_img=False, weights=['runs/train/exp5/weights/best.pt'])
 YOLOv5 🚀 4e4d2b9 torch 1.8.1+cu111 CUDA:0 (NVIDIA GeForce RTX 3070, 7973.6875MB)
