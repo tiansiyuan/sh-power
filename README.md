@@ -21,7 +21,7 @@ Handling connection for 8080
 运行下面的命令以获取`IP`地址:
 
 ```sh
-kubectl -n kubeflow get svc istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+kubectl -n istio-system get svc istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
 通常，输出是`10.64.140.43`。如果不是的话，取实际的输出。
