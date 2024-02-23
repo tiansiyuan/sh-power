@@ -78,7 +78,7 @@ python detect.py --input <输入图片文件名> --output <输出图片文件名
 #### 不用 Docker
 
 ```sh
-Ctrl-C torchserve 命令
+torchserve --stop
 ```
 
 #### 使用 Docker
