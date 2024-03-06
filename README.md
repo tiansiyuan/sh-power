@@ -433,7 +433,7 @@ Optimizer stripped from runs/train/exp5/weights/best.pt, 14.4MB
 
 对于 `VOCdevkit/images` 中的例子图像运行推理：
 ```
-python detect.py --weight runs/train/exp5/weights/best.pt   --source  VOCdevkit/images/train/000004.jpg
+!python detect.py --weight runs/train/exp5/weights/best.pt   --source  VOCdevkit/images/train/000004.jpg
 
 Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.25, device='', exist_ok=False, img_size=640, iou_thres=0.45, name='exp', nosave=False, project='runs/detect', save_conf=False, save_txt=False, source='VOCdevkit/images/train/000004.jpg', update=False, view_img=False, weights=['runs/train/exp5/weights/best.pt'])
 YOLOv5 🚀 4e4d2b9 torch 1.8.1+cu111 CUDA:0 (NVIDIA GeForce RTX 3070, 7973.6875MB)
