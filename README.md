@@ -2,7 +2,7 @@
 
 使用 YOLOv5。
 
-为在浏览器里访问系统的仪表板（Dashboard，http://192.168.1.5:8080 ），后台需要执行：
+为在浏览器里访问系统的仪表板（Dashboard，http://192.168.1.5:8080 ），后台终端需要执行：
 
 ```sh
 microk8s kubectl port-forward -n istio-system svc/istio-ingressgateway --address 0.0.0.0 8080:80
@@ -52,9 +52,9 @@ ssh -D 9999 sn-kf@192.168.1.5
 - 在 notebook 中 clone 该 repo 并安装 requirements.txt 中的依赖包:
 
 ```
-git clone https://github.com/tiansiyuan/sh-power.git
+!git clone https://github.com/tiansiyuan/sh-power.git
 cd sh-power/notebook
-pip install -r requirements.txt
+!pip install -r requirements.txt
 
 注意：在运行上述命令后，可能会有类似的警告(Note: you may need to restart the kernel to use updated packages.) You can restart your Jupyter Kernel by simply clicking Kernel > Restart from the Jupyter menu. Note: This will reset your notebook and remove all variables or methods you've defined! Sometimes you'll notice that your notebook is still hanging after you've restart the kernel. If this occurs try refreshing your browser
 ```
@@ -66,8 +66,8 @@ mkdir -p VOCdevkit
 cd VOCdevkit
 
 # 下载数据
-wget https://jhx.japaneast.cloudapp.azure.com/share/VOC2007.zip
-unzip VOC2007.zip
+!wget https://jhx.japaneast.cloudapp.azure.com/share/VOC2007.zip
+!unzip VOC2007.zip
 Archive:  VOC2007.zip
    creating: VOC2007/
    creating: VOC2007/Annotations/
@@ -81,7 +81,7 @@ Archive:  VOC2007.zip
   inflating: VOC2007/JPEGImages/PartB_02404.jpg  
 
 cd ..
-python prepare.py
+!python prepare.py
 Probability: 26
 Probability: 62
 Probability: 78
@@ -115,7 +115,7 @@ width_multiple: 0.50  # layer channel multiple
 ## 模型训练
 
 ```
-python train.py     # you can also add '--arguments' to change for your setting
+!python train.py     # you can also add '--arguments' to change for your setting
 
 github: skipping check (not a git repository)
 YOLOv5 🚀 4e4d2b9 torch 1.8.1+cu111 CUDA:0 (NVIDIA GeForce RTX 3070, 7973.6875MB)
