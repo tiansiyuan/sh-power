@@ -28,6 +28,14 @@ kubectl -n istio-system get svc istio-ingressgateway -o jsonpath='{.status.loadB
 
 在本地通过`http://10.64.140.43.nip.io`访问仪表板。
 
+如果上述命令输出为空，则运行：
+
+```sh
+kubectl get services -n istio-system
+```
+
+取`istio-ingressgateway`一行中的`CLUSTER-IP`。
+
 如果是远程访问，需要设置一个`SSH`通道并用作`SOCKS`代理。
 
 ```sh
