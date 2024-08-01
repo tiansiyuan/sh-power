@@ -67,7 +67,7 @@ cd sh-power/notebook
 注意：在运行上述命令后，可能会有类似的警告(Note: you may need to restart the kernel to use updated packages.) You can restart your Jupyter Kernel by simply clicking Kernel > Restart from the Jupyter menu. Note: This will reset your notebook and remove all variables or methods you've defined! Sometimes you'll notice that your notebook is still hanging after you've restart the kernel. If this occurs try refreshing your browser
 ```
 
-- 我们使用 VOC2007 数据集 (train: *16551 images;*  val: *4952 image*) ，你可以从[这里](https://jhx.japaneast.cloudapp.azure.com/share/VOC2007.zip)获得数据。脚本 `prepare.py` 用于处理数据，将 VOC 标签(label) 格式 (.xml) 转换为 Yolo 标签格式 (.txt) 并切分为训练 (training) 和验证 (validating) 数据。
+- 我们使用 VOC2007 数据集 (train: *16551 images;*  val: *4952 image*) ，你可以从[这里](https://github.com/tiansiyuan/sh-power/releases/download/1.0/VOC2007.zip)获得数据。脚本 `prepare.py` 用于处理数据，将 VOC 标签(label) 格式 (.xml) 转换为 Yolo 标签格式 (.txt) 并切分为训练 (training) 和验证 (validating) 数据。
 
 ```
 mkdir -p VOCdevkit
